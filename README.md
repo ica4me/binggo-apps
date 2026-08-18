@@ -16,3 +16,6 @@ Open apps
 ```bash
 http://<ip>:8788
 ```
+
+## SreenShot Apps
+![Screenshot Apps](screenshot/one.png)
