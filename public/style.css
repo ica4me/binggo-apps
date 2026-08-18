@@ -1,0 +1,63 @@
+body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f9; padding: 20px; }
+.alert { padding: 15px; background: #e2e3e5; margin-bottom: 20px; border-radius: 5px; font-weight: bold;}
+.section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: repeat(5, 60px); gap: 5px; justify-content: center; margin: 20px auto; }
+.grid input, .grid .cell { width: 60px; height: 60px; font-size: 20px; text-align: center; box-sizing: border-box;}
+.grid .cell { display: flex; align-items: center; justify-content: center; border: 2px solid #333; background: #fff; font-weight: bold;}
+.cell.marked { background: #ff4757; color: white; }
+button { padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #2ed573; border: none; color: white; border-radius: 5px; margin-top:10px;}
+button:hover { background-color: #27ae60; }
+button:disabled { background-color: #ccc; cursor: not-allowed; }
+input[type="text"], input[type="number"] { padding: 10px; font-size: 16px; margin-bottom: 10px; }
+ul { list-style-type: none; padding: 0; }
+li { font-size: 18px; margin: 10px 0; font-weight:bold; }
+
+/* sel papan yang bisa diklik saat giliran sendiri */
+.cell.clickable { cursor: pointer; border-color: #0984e3; background: #f1f8ff; transition: background .12s, transform .12s; }
+.cell.clickable:hover { background: #0984e3; color: #fff; transform: scale(1.05); }
+.cell.clickable:active { transform: scale(0.96); }
+
+.hint { font-size: 14px; color: #636e72; margin: 4px 0 12px; }
+.starter-info { font-size: 15px; font-weight: bold; color: #0984e3; margin: 4px 0 12px; }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.btn-secondary { background-color: #0984e3; }
+.btn-secondary:hover { background-color: #0768b3; }
+.btn-ghost { background-color: #636e72; }
+.btn-ghost:hover { background-color: #4b5457; }
+
+.board-input::-webkit-inner-spin-button,
+.board-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.board-input {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.scoreboard {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto 15px auto;
+}
+.score-item {
+    flex: 1;
+    background: #fff;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    padding: 10px;
+}
+.score-item.me { border-color: #2ed573; background: #f0fff4; }
+.score-item.turn { box-shadow: 0 0 0 3px rgba(9,132,227,.35); }
+.score-name { font-weight: bold; font-size: 15px; color: #2d3436; }
+.score-num { font-size: 34px; font-weight: bold; color: #d63031; line-height: 1; }
+.score-vs { display: flex; align-items: center; font-weight: bold; color: #636e72; }
+
+@media (max-width: 480px) {
+    .grid { grid-template-columns: repeat(5, 54px); }
+    .grid input, .grid .cell { width: 54px; height: 54px; font-size: 18px; }
+}
