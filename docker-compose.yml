@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  bingo-web-new:
+    build: .
+    container_name: bingo-app-new
+    ports:
+      - "8788:8788"
+    restart: unless-stopped
