@@ -1,22 +1,16 @@
-\## Cara running apps
+## Cara running apps
 
-
-
-$ mkdir /root/bingo-app-new
-
-$ cd /root/bingo-app-new
-
-
-
-Paste code
-
-
-
-$ docker compose up -d --build
+```bash
+#Jalankan installer
+apt install git -y
+git clone https://github.com/ica4me/binggo-apps.git /root/bingo-app-new
+cd /root/bingo-app-new
+docker compose up -d --build
+```
 
 
 
 Open apps 
-
+```bash
 http://<ip>:8788
-
+```
